@@ -1,0 +1,10 @@
+def  bubbling(arr):
+    for i in range(len(arr)-1,0,-1):
+        count = 0
+        for j in range(0,i):
+            if arr[j] > arr[j+1]:
+                arr[j] , arr[j+1] = arr[j+1] , arr[j]#冒泡排序核心思想，每两个之间进行比较，将较大的元素放在后面
+                count += 1
+        if count == 0:  #如果数组是已经排好序的数组则直接返回
+            return arr
+    return arr
